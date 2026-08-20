@@ -63,3 +63,29 @@ The project uses FastF1's documented session, lap, and telemetry APIs [1]. The c
 [1]: https://theoehrly-fast-f1.mintlify.app/quickstart "FastF1 Quickstart Documentation"
 [2]: https://github.com/theOehrly/Fast-F1 "FastF1 GitHub Repository"
 [3]: https://plotly.com/python/ "Plotly Python Documentation"
+
+## Full-race tire degradation and consistency dashboard
+
+The full-race dashboard compares raw lap times, stint-normalized pace, tire-age degradation slopes, and rolling five-lap lap-time variability for two drivers:
+
+```bash
+python f1_full_race_dashboard.py \
+  --year 2026 \
+  --event "Hungarian Grand Prix" \
+  --drivers NOR VER \
+  --output f1_full_race_dashboard.html
+```
+
+This produces `f1_full_race_dashboard.html` and `f1_full_race_stint_summary.csv`. Degradation slopes are indicative because fuel load, traffic, safety-car periods, weather, and pit-lap artifacts can affect lap times.
+
+## Published dashboard
+
+The repository's `docs/` directory is configured for GitHub Pages. The live dashboard is published at:
+
+https://theneotic.github.io/f1-telemetry-dashboard/
+
+[4]: https://pages.github.com/ "GitHub Pages Documentation"
+
+## Full-race example results
+
+For the generated 2026 Hungarian Grand Prix output, Norris had four detected stints and Verstappen had three. Their stint-level summary is available in `f1_full_race_stint_summary.csv`; the dashboard provides hoverable lap-time and rolling-consistency traces.
