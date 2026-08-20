@@ -1,0 +1,4 @@
+corner,distance_m,norris_mean_speed_kmh,verstappen_mean_speed_kmh,norris_speed_delta_kmh,estimated_norris_time_gain_s
+T3,3780.0,209.56,169.81,39.74,0.8645
+T1,1502.0,95.1,159.7,-64.6,-3.1965
+T2,2845.0,116.55,257.0,-140.45,-3.7475
